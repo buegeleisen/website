@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http'
 
 let params = new HttpParams().set('token', 'ci86h9hr01qnrgm326e0ci86h9hr01qnrgm326eg');
 
