@@ -8,6 +8,13 @@ import { HomeComponent } from './home/home.component';
 import { StockComponent } from './stock/stock.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ShortLinkComponent } from './short-link/short-link.component';
+import { FormsModule } from '@angular/forms';
+import { ShortLinkRedirectComponent } from './short-link-redirect/short-link-redirect.component';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +22,17 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     StockComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    ShortLinkComponent,
+    ShortLinkRedirectComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
