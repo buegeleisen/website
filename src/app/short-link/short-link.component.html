@@ -70,8 +70,16 @@
       </thead>
       <tbody *ngFor="let item of item$ | async">
         <tr>
-          <td>{{ item.url }}</td>
-          <td>https://website-mimas.vercel.app/r/{{ item.shortUrl }}</td>
+          <td>
+            <a href="{{ item.url }}">
+              {{ item.url }}
+            </a>
+          </td>
+          <td>
+            <a href="https://website-mimas.vercel.app/r/{{ item.shortUrl }}">
+              https://website-mimas.vercel.app/r/{{ item.shortUrl }}
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>
