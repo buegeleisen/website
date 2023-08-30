@@ -14,6 +14,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ShortLinkComponent } from './short-link/short-link.component';
 import { FormsModule } from '@angular/forms';
 import { ShortLinkRedirectComponent } from './short-link-redirect/short-link-redirect.component';
+import { RemoveIfFeatureOffDirective } from './utils/remove-if-feature-off.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ShortLinkRedirectComponent } from './short-link-redirect/short-link-red
     NavbarComponent,
     AboutComponent,
     ShortLinkComponent,
-    ShortLinkRedirectComponent
+    ShortLinkRedirectComponent,
+    RemoveIfFeatureOffDirective
   ],
   imports: [
     BrowserModule,
